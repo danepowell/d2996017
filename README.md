@@ -1,23 +1,10 @@
-# My Project
+# Troubleshooting d2996017
 
-A brief description of My Project.
+This is a test repo for reproducing https://www.drupal.org/project/openapi/issues/2996017
 
-## Using This Template
+To reproduce, simply do a fresh install of the site using the Lightning profile (this will give you OpenAPI beta1), then run composer update (to get OpenAPI beta2), then drush updb, and finally navigate to the status report (or pretty much any other admin page) and observe the giant persistent error message.
 
-Remove this section after initial setup!
-
-Search for and replace the following placeholders within this file:
-
-| Placeholder | Example |
-| --- | --- |
-| `#ACQUIA_CLOUD_URL` | https://cloud.acquia.com/app/develop/applications/12345678-1234-1234-12345678901234567 |
-| `#GIT_PRIMARY_DEV_BRANCH` | `master` or `develop` |
-| `#GITHUB_ORG` | The "org" in https://github.com/org/project |
-| `#GITHUB_PROJECT` | The "project" in https://github.com/org/project |
-| `#JIRA_URL` | https://org.atlassian.net/projects/PROJ |
-| `#LOCAL_DEV_SITE_ALIAS` | `@example.local` |
-| `#LOCAL_DEV_URL` | http://local.example.com/ |
-| `#TRAVIS_URL` | https://travis-ci.com/org/PROJ |
+Note that this test project uses BLT and DrupalVM which can make it a lot faster to setup and provide a more consistent environment for reproducing the error. I'd recommend using those tools, there are instructions in the README, but whatever works for you.
 
 ## Getting Started
 
